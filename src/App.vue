@@ -239,7 +239,7 @@ export default {
     redirectShop: function () {
       return (this.liff_data.line_version !== null || this.liff_data.os == "web") ? 
       (store.remove("_liff"), this.redirect(this.basic.redirect, {}, false, true)) :
-      this.redirect("", { action: "relogin" }, true);
+      this.redirect("", { action: "back" }, true);
     },
     initApp: function () {
       //action作業
