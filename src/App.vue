@@ -24,7 +24,7 @@ import axios from "axios";
 
   <div v-show="basic.cta_btn != ''" class="btn-wrapper">
     <button
-      @click="openLink(basic.cta_btn, cta_external)"
+      @click="openLink(basic.cta_btn, basic.cta_external)"
       class="btn-redirect"
     >
       點我繼續
