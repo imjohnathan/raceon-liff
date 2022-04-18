@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-no-fit=no, maximun-scale=1, viewport-fit=cover">
+  <meta property="og:description" content="出色表現，來自最佳準備。Be An Athlete, Charge Your Game." />
+  <meta property="og:image" content="https:{{ 'raceon_og.jpg' | asset_url }}" />
+
+  <title>{{shop.name}}</title>
+  <link rel="shortcut icon" href="{{ 'img/favicon.png' | asset_url }}" type="image/png" />
+  <style>
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    article,
+    aside,
+    audio,
+    b,
+    big,
+    blockquote,
+    body,
+    canvas,
+    caption,
+    center,
+    cite,
+    code,
+    dd,
+    del,
+    details,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    embed,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    main,
+    mark,
+    menu,
+    nav,
+    object,
+    ol,
+    output,
+    p,
+    pre,
+    q,
+    ruby,
+    s,
+    samp,
+    section,
+    small,
+    span,
+    strike,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    tt,
+    u,
+    ul,
+    var,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    menu,
+    nav,
+    section {
+      display: block
+    }
+
+    [hidden] {
+      display: none
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style: none
+    }
+
+    blockquote,
+    q {
+      quotes: none
+    }
+
+    blockquote:after,
+    blockquote:before,
+    q:after,
+    q:before {
+      content: "";
+      content: none
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    body {
+      font-size: 16px;
+      font-family: -apple-system, PingFangTC-Regular, Noto Sans, Arial, Source Han Sans TC, sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      overflow: hidden;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: rgb(242, 242, 242);
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .font-medium {
+      font-family: -apple-system, PingFangTC-Medium, Noto Sans, Arial, Source Han Sans TC, sans-serif;
+      font-weight: 700
+    }
+
+    .flex-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+
+    .center-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%)
+    }
+
+    .min-width-300 {
+      min-width: 300px
+    }
+
+    .min-height-40 {
+      min-height: 40px
+    }
+
+    .headline {
+      margin-top: 1.125rem;
+      color: #4a4a4a;
+      font-size: 1rem;
+      font-weight: 700
+    }
+
+    .paragraph {
+      margin-top: 1rem;
+      color: grey;
+      font-size: .9375rem;
+      text-align: center
+    }
+
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    [v-cloak] {
+      display: none;
+    }
+
+    .text-wrapper {
+      width: 100%;
+      height: 60px;
+      color: #2c3848;
+      position: absolute;
+      left: 50%;
+      top: calc(50% + 76px);
+      transform: translateX(-50%) translateY(-50%);
+      text-align: center;
+      line-height: 30px;
+      font-size: 17px;
+      font-family: PingFangTC-Medium, 'Microsoft JhengHei';
+      z-index: 2;
+    }
+
+    .btn-wrapper {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+    }
+
+    .btn-redirect {
+      display: block;
+      animation: fade-in 0.25s ease-in-out 3s forwards;
+      opacity: 0;
+      width: 200px;
+      height: 40px;
+      border: 2px solid transparent;
+      outline: none;
+      background-color: rgb(0, 0, 0);
+      margin: auto;
+      margin-bottom: 10px;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 999px;
+      transform: translateX(-50%) scale(1);
+      transition: 0.25s transform ease-in-out;
+    }
+
+    .btn-redirect.oa {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      border-color: black;
+
+    }
+
+    .btn-redirect:active,
+    .btn-redirect:hover {
+      transform: translateX(-50%) scale(0.90);
+    }
+
+    .gg-spinner {
+      transform: scale(var(--ggs, 1))
+    }
+
+    .gg-spinner,
+    .gg-spinner::after,
+    .gg-spinner::before {
+      box-sizing: border-box;
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 40px
+    }
+
+    .gg-spinner::after,
+    .gg-spinner::before {
+      content: "";
+      position: absolute;
+      border-radius: 100px
+    }
+
+    .gg-spinner::before {
+      animation: spinner 1s cubic-bezier(.6, 0, .4, 1) infinite;
+      border: 3px solid transparent;
+      border-top-color: currentColor
+    }
+
+    .gg-spinner::after {
+      border: 3px solid;
+      opacity: .2
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      to {
+        transform: rotate(359deg)
+      }
+    }
+
+
+    html * {
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  </div>
+
+
+  <script>
+    //fix mobile
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    //env
+    const line = {
+      baseUrl : 'https://www.raceon.com.tw',
+      appId   : 1653395526,
+      liffId  : '1653395526-JlZvxj65',
+      pageHandle: 'liff_test',
+      debug : true
+    } 
+  </script>
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+      var vConsole = line.debug ? new window.VConsole() : '';
+    </script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
