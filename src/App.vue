@@ -12,7 +12,7 @@ import axios from "axios";
     <p class="paragraph">請稍候...</p>
   </div>
 
-  <div v-if="work.debug">
+  <div>
     <ul>
       <li><a @click="reboot()">重來</a></li>
       <li v-if="basic.customer"><a @click="unbindLiff()">解除綁定</a></li>
@@ -323,7 +323,8 @@ export default {
           if (
             urlParams.has("action") &&
             urlParams.get("action") !== "back" &&
-            urlParams.get("action") !== "relogin"
+            urlParams.get("action") !== "relogin" &&
+            urlParams.get("action") !== "id_token"
           ) {
             this.work.message.push(`儲存${urlParams.get("action")}`);
             let ufriend =
