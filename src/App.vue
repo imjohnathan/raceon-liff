@@ -306,7 +306,7 @@ export default {
 
       this.work.message.push(`跳轉頁面`);
       if (this.work.debug) {
-        if (!confirm("redirect to line:" + this.basic.cta_btn)) {return}
+        if (!confirm("redirect to line:" + this.basic.cta_btn)) { return }
       } 
       return  external ? liff.openWindow({ url: this.basic.cta_btn }) : window.location.replace(this.basic.cta_btn)
 
