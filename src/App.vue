@@ -339,9 +339,8 @@ export default {
               friend: ufriend,
               debug: udebug,
             });
-
-            resolve();
           }
+          resolve();
 
          }); 
     },
